@@ -1,0 +1,62 @@
+import CatInfo from "../models/Cat.js";
+import fetch from 'node-fetch';
+
+const getBreeds = (breed) => {
+    return fetch(`https://api.thecatapi.com/v1/breeds/search?q=${breed.name}`, {
+            method: 'GET',
+            headers: {
+                "X-Api-Key": process.env.CAT_API_KEY
+            }
+        })
+        .then(response => { return response.json() })
+        .catch(err => console.log(err))
+}
+
+const getMissingBreeds = (amount) => {
+    return fetch(`https://api.thecatapi.com/v1/breeds?limit=${amount}`, {
+        method: 'GET',
+        headers: {
+            "X-Api-Key": process.env.CAT_API_KEY
+        }
+    })
+        .then(response => { return response.json() })
+        .catch(err => console.log(err))
+}
+
+export const mostVisited = async (req, res) => {
+    const breedAmount = req.body.amount;
+    const topBreeds = [];
+    try {
+        const breedRanking = await CatInfo.find().sort({'visitCount': 'desc'});
+        while(topBreeds.length < breedRanking.length){
+            const breed = await getBreeds(breedRanking[topBreeds.length]);
+            topBreeds.push(breed);
+        }
+        if(topBreeds.length < breedAmount){
+            const missingBreeds = await getMissingBreeds(breedAmount-topBreeds.length)
+            topBreeds.push(...missingBreeds);
+        }
+        res.status(200).json(topBreeds);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+}
+
+export const visitBreed =  async (req, res) => {
+    const name = req.body.name;
+    try {
+        const visitedBreed = await CatInfo.findOne({"name": name})
+        if(visitedBreed){
+            visitedBreed.visited();
+            await visitedBreed.save()
+            res.status(200).json({ greetings: `${visitedBreed.name} says hi!`})
+        } else {
+            const firstVisited = new CatInfo({name: name})
+            firstVisited.visited();
+            await firstVisited.save();
+            res.status(200).json({ greetings: `${firstVisited.name} thanks you for being the first one to visit`})
+        }
+    } catch (err) {
+        res.status(400).json({ message: err.message })
+    }
+}
