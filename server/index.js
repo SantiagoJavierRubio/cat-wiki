@@ -13,7 +13,6 @@ app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 app.use('/api', apiRoutes);
-
 app.use('/log', logRoutes);
 
 app.get('/', (req, res) => {
