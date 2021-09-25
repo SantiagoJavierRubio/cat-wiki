@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import BreedPage from './components/BreedPage/BreedPage';
 import TopBreeds from './components/TopBreeds/TopBreeds';
+import CatArticle from './components/CatArticle/CatArticle';
 import { ReactComponent as Logo } from './images/CatwikiLogo.svg';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path="/" exact={true} component={Home} />
             <Route path="/breed/:id" component={BreedPage} />
             <Route path="/most_searched" component={TopBreeds} />
+            <Route path="/related_article" component={CatArticle} />
           </Switch>
         </Router>
       </main>

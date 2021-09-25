@@ -1,0 +1,102 @@
+.home-bottom {
+    width: 100%;;
+    background-color: transparent;
+    margin-top: 1rem;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.home-bottom .article-text {
+    max-width: 35%;
+}
+.home-bottom .separator-line {
+    max-width: 3.5rem;
+    width: 20%;
+    background-color: rgb(77,39,12);
+    border-radius: 77px;
+    height: 4px;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+.home-bottom .article-text h4 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 3rem;
+    color: rgb(41,21,7);
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+.home-bottom .article-text p {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgb(41,21,7);
+}
+.home-bottom .more-link {
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: rgba(41, 21, 7, 0.6);
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+.home-bottom .more-link:hover {
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+}
+.home-bottom .article-images {
+    display: flex;
+    max-width: 65%;
+}
+.home-bottom .left-imgs {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    align-self: flex-start;
+    width: 50%;
+    flex-shrink: 1;
+}
+.home-bottom .right-img {
+    width: 50%;
+    flex-shrink: 1;
+}
+#top-left-img {
+    max-width: 17rem;
+    width: 95%;
+    margin: auto;
+}
+#bottom-left-img {
+    max-width: 12.2rem;
+    width: 75%;
+    padding-top: 1rem;
+    margin: auto;
+    margin-right: 0;
+}
+#right-img {
+    max-width: 15rem;
+    width: 75%;
+    height: auto;
+}
+@media (max-width: 768px){
+    .home-bottom {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 99%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .home-bottom .article-text {
+        max-width: 100%;
+    }
+    .home-bottom .article-text h4 {
+        font-size: 2rem;
+    }
+    .home-bottom .article-images {
+        max-width: 100%;
+        margin: 2rem auto;
+    }
+}

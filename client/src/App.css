@@ -41,7 +41,6 @@ footer a:link, footer a:active, footer a:visited {
 }
 .placeholder-item {
     width: 100%;
-    box-shadow: 0 4px 10px 0 rgba(33, 33, 33, 0.15);
     border-radius: 16px;
     position: relative;
     overflow: hidden;

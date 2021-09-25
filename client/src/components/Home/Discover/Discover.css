@@ -79,7 +79,11 @@
         height: 30vw;
         margin-bottom: 5rem;
     }
+    .head {
+        flex-direction: column;
+    }
     .head .title {
+        width: 100%;
         font-size: 2rem;
     }
 }
