@@ -34,6 +34,10 @@ const Discover = () => {
 
     return(
         <div className="home-middle">
+            <div>
+                <h2 className="most-searched-text">Most Searched Breeds</h2>
+                <div className="separator-line" />
+            </div>
             <div className="head">
                 <h3 className="title">66+ Breeds for you to discover</h3>
                 <Link to="/most_searched" className="more-link">SEE MORE <span className="material-icons">arrow_right_alt</span></Link>

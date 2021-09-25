@@ -1,9 +1,24 @@
 .home-middle {
     margin-top: 0px;
     background-color: #E3E1DC;
-    padding: 6% 5%;
+    padding: 5% 5%;
     height: fit-content;
     border-radius: 0px 0px 42px 42px ;
+}
+.home-middle .separator-line {
+    max-width: 3.5rem;
+    width: 20%;
+    background-color: rgb(77,39,12);
+    border-radius: 77px;
+    height: 4px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+.home-middle .most-searched-text {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgb(41,21,7);
 }
 .head {
     display: flex;
@@ -85,5 +100,8 @@
     .head .title {
         width: 100%;
         font-size: 2rem;
+    }
+    .home-middle .most-searched-text {
+        font-size: 1rem;
     }
 }
