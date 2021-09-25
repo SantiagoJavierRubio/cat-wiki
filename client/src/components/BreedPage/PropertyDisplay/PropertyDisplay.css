@@ -1,0 +1,43 @@
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.display p {
+    width: 50%;
+    max-width: 10rem;
+    min-width: 2rem;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    margin: .75rem 0;
+}
+.property-score {
+    display: flex;
+    flex-grow: 1;
+}
+.point {
+    min-width: 1rem;
+    max-width: 3rem;
+    width: 25%;
+    margin: 0 .5rem;
+    height: .75rem;
+    border-radius: 8px;
+}
+.fill-point {
+    background-color: #544439;
+}
+.empty-point {
+    background-color: #E0E0E0;
+}
+
+@media (max-width: 1200px){
+    .point {
+        margin: 0 .2rem;
+    }
+}
+
+@media (max-width: 768px){
+    .point {
+        margin: 0 .2rem;
+    }
+}

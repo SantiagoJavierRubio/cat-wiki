@@ -1,0 +1,94 @@
+.App {
+    margin: 0 auto;
+    max-width: 1600px;
+    width: 80%;
+    box-sizing: border-box;
+}
+header {
+    padding: 1.5rem 0rem;
+    margin: 0;
+}
+header .logo {
+    height: 2rem;
+    margin-left: -.8rem;
+    cursor: pointer;
+}
+footer {
+    background-color: #000;
+    padding: 1.5rem .5rem;
+    border-radius: 42px 42px 0px 0px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .logo {
+    height: 2rem;
+    margin-left: 2rem;
+}
+footer .created-by{
+    color: #fff;
+    font-family: 'Montserrat';
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-right: .5rem;
+    
+}
+footer a:link, footer a:active, footer a:visited {
+    color: #fff;
+    font-weight: bold;
+    text-decoration-color: rgb(196, 196, 196, 0.8)
+}
+.placeholder-item {
+    width: 100%;
+    box-shadow: 0 4px 10px 0 rgba(33, 33, 33, 0.15);
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(68, 67, 71, 0.4)
+}
+.placeholder-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    background: linear-gradient(to right, transparent 0%, #E8E8E8 50%, transparent 100%);
+    animation: load 1s cubic-bezier(0.4, 0.0, 0.2, 1) infinite;
+}
+
+@keyframes load {
+    from {
+        left: -150px;
+    }
+    to   {
+        left: 100%;
+    }
+}
+
+@keyframes first-load {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px){
+    .App{
+        width: 100%
+    }
+    footer {
+        flex-direction: column;
+    }
+    footer .created-by{
+        text-align: center;
+        font-size: 1rem;
+    }
+    footer .logo {
+        margin: 0 auto;
+    }
+}

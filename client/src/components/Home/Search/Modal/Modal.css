@@ -1,0 +1,77 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.modal-box {
+    z-index: 2;
+    background-color: #FFF;
+    border-radius: 12px;
+    width: 100%;
+    height: 70%;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+.modal-close-button {
+    align-self: flex-end;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(151,151,151,0.1);
+    color: #291507;
+}
+.modal-search {
+    margin: 1.5rem .5rem;
+    padding: .5rem;
+    border: 1px solid #000;
+    border-radius: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal-search input {
+    outline: none;
+    border: none;
+    height: 100%;
+    flex-grow: 1;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgb(41,21,7);
+}
+.modal-box .breed-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.breed-list .breed-list-option {
+    border: none;
+    text-align: left;
+    width: 100%;
+    padding: .8rem 1rem;
+    font-size: 1.2rem;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    background-color: transparent;
+    border-radius: 12px;
+}
+.breed-list .breed-list-option:hover {
+    background-color: rgba(151,151,151,0.1)
+}
+.breed-list h5 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 auto;
+}

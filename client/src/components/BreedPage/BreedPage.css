@@ -1,0 +1,81 @@
+.breed-page {
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 15%;
+    min-height: 60vh;
+}
+.breed-page .breed-img {
+    margin: 0 auto;
+    object-fit: cover;
+    flex-shrink: 0;
+    height: 20rem;
+    width: 20rem;
+    max-width: 100%;
+    border-radius: 24px;
+    animation: 1s 1 first-load;
+}
+.breed-page .breed-info {
+    margin-left: 10%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    animation: 1s 1 first-load;
+}
+.breed-page .breed-info h2, .more-images h3 {
+    font-family: 'Montserrat';
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: rgb(41,21,7);
+    margin: 0;
+}
+.description-item {
+    font-family: 'Montserrat';
+    font-size: 1rem;
+    margin: .75rem 0;
+}
+.other-photos {
+    margin-top: 1rem;
+    margin-left: .5rem;
+    max-width: 80rem;
+}
+.other-photos .other-img {
+    margin: .5rem auto;
+    padding: 1rem;
+    object-fit: cover;
+    flex-shrink: 0;
+    height: 17rem;
+    width: 17rem;
+    border-radius: 32px;
+    animation: 1s 1 first-load;
+}
+.other-photos .other-img-load {
+    display: inline-block;
+    margin: 1rem;
+    flex-shrink: 0;
+    height: 17rem;
+    width: 17rem;
+    border-radius: 32px;
+}
+
+@media (max-width: 768px){
+    .breed-page {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    .breed-page .breed-info {
+        margin-left: .5rem;
+    }
+    .breed-info h2 {
+        margin-top: 1rem;
+    }
+    .other-photos {
+        margin-left: 0;
+        text-align: center;
+    }
+    .other-photos .other-img {
+        margin: .5rem 0;
+    }
+}

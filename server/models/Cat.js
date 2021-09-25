@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 
 const catSchema = mongoose.Schema({
     name: String,
+    name_id: String,
     visitCount: {
         type: Number,
         default: 0
